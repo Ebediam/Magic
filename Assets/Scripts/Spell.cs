@@ -10,7 +10,11 @@ public class Spell : ScriptableObject
     public float damage;
     public float speed;
     public float turnDuration;
+    public float spellDuration;
     public bool enemyMisses;
+    public bool mergedSpell;
+    public Spell spellComponent1;
+    public Spell spellComponent2;
     // Start is called before the first frame update
     void Start()
     {

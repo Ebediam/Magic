@@ -6,17 +6,17 @@ public class SpellController : MonoBehaviour
 {
     public EnemyManager enemy;
     public Rigidbody rb;
-    public ParticleSystem particles;
     public Spell spellData;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("StopParticles", spellData.turnDuration);
+
     }
 
     public void StopParticles()
     {
-        particles.Stop();
+
+
     }
     // Update is called once per frame
     void Update()
@@ -31,7 +31,7 @@ public class SpellController : MonoBehaviour
             enemy = other.transform.GetComponent<EnemyManager>();
             enemy.Damaged(spellData.damage);
             enemy.missAttack = spellData.enemyMisses;
-            Destroy(this);
+            Destroy(this.gameObject, spellData.spellDuration);
         }
 
     }

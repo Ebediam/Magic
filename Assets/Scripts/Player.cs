@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class Player : MonoBehaviour
 {
     public delegate void AttackDelegate(float seconds);
@@ -13,12 +14,18 @@ public class Player : MonoBehaviour
     public Transform spawnPoint;
 
     public List<Spell> spells;
+    public List<Spell> mergedSpells;
+
+    public Spell lastSpell;
+    public Spell lastMergedSpell;
+    public Spell currentSpell;
     SpellController spell;
     Quaternion originalRotation;
     Vector3 originalPosition;
 
     public RectTransform healthUI;
-    
+
+    public TextMeshProUGUI spellText;
 
     public float maxHealth;
     float currentHealth;
@@ -47,14 +54,61 @@ public class Player : MonoBehaviour
 
     public void Attack(int spellNumber)
     {
+        currentSpell = spells[spellNumber];
+        spellText.text = "Last spell: " + currentSpell.name;
+       
+        if (lastSpell)
+        {
+            foreach(Spell mergeSpell in mergedSpells)
+            {
+                if(currentSpell == mergeSpell.spellComponent1)
+                {
+                    if (lastSpell == mergeSpell.spellComponent2)
+                    {
+                        if(mergeSpell != lastMergedSpell)
+                        {
+                            currentSpell = mergeSpell;
+                            lastMergedSpell = currentSpell;
+                        }
 
-        attackEvent?.Invoke(spells[spellNumber].turnDuration);
+                        break;
+                    }
+                }else if(currentSpell == mergeSpell.spellComponent2)
+                {
+                    if(lastSpell == mergeSpell.spellComponent1)
+                    {
+                        if (mergeSpell != lastMergedSpell)
+                        {
+                            currentSpell = mergeSpell;
+                            lastMergedSpell = currentSpell;
+                        }
+                        break;
+                    }
+                }
+            }
+
+
+        }            
+
+
+
+        attackEvent?.Invoke(currentSpell.turnDuration);
         animator.Play("Attack");
-        spell = Instantiate(spells[spellNumber].prefab, spawnPoint.position, spawnPoint.rotation).GetComponent<SpellController>();
-        spell.rb.AddForce(spells[spellNumber].speed * spell.transform.forward, ForceMode.VelocityChange);
-        spell.spellData = spells[spellNumber];
+        spell = Instantiate(currentSpell.prefab, spawnPoint.position, spawnPoint.rotation).GetComponent<SpellController>();
+        spell.rb.AddForce(currentSpell.speed * spell.transform.forward, ForceMode.VelocityChange);
+        spell.spellData = currentSpell;
         transform.rotation = originalRotation;
         transform.position = originalPosition;
+
+        lastSpell = spells[spellNumber];
+        if (currentSpell.mergedSpell)
+        {
+            lastMergedSpell = currentSpell;
+        }
+        else
+        {
+            lastMergedSpell = null;
+        }
     }
 
 

@@ -957,8 +957,21 @@ MonoBehaviour:
   spells:
   - {fileID: 11400000, guid: aa1d858de301c5747b56fbad1fdb18fd, type: 2}
   - {fileID: 11400000, guid: f4fbba8847fedc6428dc607feba570d6, type: 2}
+  - {fileID: 11400000, guid: 7c6060f7d9ca4d64f84a5f52ba224e99, type: 2}
+  - {fileID: 11400000, guid: 8aae5eb7290671347ae199c73c322745, type: 2}
+  - {fileID: 11400000, guid: 99cdca030e2b144468735b6643271de4, type: 2}
+  - {fileID: 11400000, guid: 9a381513555aac343aa6eefc18a7e409, type: 2}
+  mergedSpells:
+  - {fileID: 11400000, guid: 474e2eb07481e564aa67a128d1924aad, type: 2}
   - {fileID: 11400000, guid: 1327d161986120a45a5bf0195a63a1b9, type: 2}
+  - {fileID: 11400000, guid: 99cdca030e2b144468735b6643271de4, type: 2}
+  - {fileID: 11400000, guid: 95fd48b77a44d59499b11776e963aa84, type: 2}
+  - {fileID: 11400000, guid: 5907f29b1d3fe144d834e161da29457d, type: 2}
+  lastSpell: {fileID: 0}
+  lastMergedSpell: {fileID: 0}
+  currentSpell: {fileID: 0}
   healthUI: {fileID: 0}
+  spellText: {fileID: 0}
   maxHealth: 100
 --- !u!1 &6706297032913287984
 GameObject:

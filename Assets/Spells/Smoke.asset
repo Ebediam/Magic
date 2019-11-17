@@ -17,4 +17,8 @@ MonoBehaviour:
   damage: 0
   speed: 0
   turnDuration: 3
+  spellDuration: 6
   enemyMisses: 1
+  mergedSpell: 1
+  spellComponent1: {fileID: 11400000, guid: aa1d858de301c5747b56fbad1fdb18fd, type: 2}
+  spellComponent2: {fileID: 11400000, guid: 8aae5eb7290671347ae199c73c322745, type: 2}

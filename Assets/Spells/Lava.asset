@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa8e87f66bc2d924c9e254bf91821181, type: 3}
-  m_Name: Lightning
+  m_Name: Lava
   m_EditorClassIdentifier: 
-  name: Lightning
-  prefab: {fileID: 4712002985639741299, guid: 1adcc2f90c385c44b846c424ad19965e, type: 3}
-  damage: 10
-  speed: 20
+  name: Lava
+  prefab: {fileID: 2531495133299477962, guid: 97a94585d8d47694683f6a045482d7ff, type: 3}
+  damage: 30
+  speed: 0
   turnDuration: 1
-  spellDuration: 1
+  spellDuration: 0.75
   enemyMisses: 0
-  mergedSpell: 0
-  spellComponent1: {fileID: 0}
-  spellComponent2: {fileID: 0}
+  mergedSpell: 1
+  spellComponent1: {fileID: 11400000, guid: aa1d858de301c5747b56fbad1fdb18fd, type: 2}
+  spellComponent2: {fileID: 11400000, guid: 99cdca030e2b144468735b6643271de4, type: 2}

@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
+
+    public GameObject canvas;
+
+    
     public List<Button> buttons;
     public delegate void TurnDelegate();
     public static TurnDelegate enemyTurn;
@@ -17,6 +22,10 @@ public class GameManager : MonoBehaviour
     {
         Player.attackEvent += ChangeTurn;
         EnemyManager.EnemyTurnEndEvent += ChangeTurn;
+        foreach(Button button in canvas.GetComponentsInChildren<Button>())
+        {
+            buttons.Add(button);
+        }
     }
 
     // Update is called once per frame

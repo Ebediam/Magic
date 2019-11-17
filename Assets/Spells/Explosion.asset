@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa8e87f66bc2d924c9e254bf91821181, type: 3}
-  m_Name: Lightning
+  m_Name: Explosion
   m_EditorClassIdentifier: 
-  name: Lightning
-  prefab: {fileID: 4712002985639741299, guid: 1adcc2f90c385c44b846c424ad19965e, type: 3}
-  damage: 10
-  speed: 20
-  turnDuration: 1
-  spellDuration: 1
+  name: Explosion
+  prefab: {fileID: 5056402402548188640, guid: b4f9429702dca5e4ea9f4f73dca75315, type: 3}
+  damage: 50
+  speed: 0
+  turnDuration: 2
+  spellDuration: 2
   enemyMisses: 0
-  mergedSpell: 0
-  spellComponent1: {fileID: 0}
-  spellComponent2: {fileID: 0}
+  mergedSpell: 1
+  spellComponent1: {fileID: 11400000, guid: aa1d858de301c5747b56fbad1fdb18fd, type: 2}
+  spellComponent2: {fileID: 11400000, guid: f4fbba8847fedc6428dc607feba570d6, type: 2}

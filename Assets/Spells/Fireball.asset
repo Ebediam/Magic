@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8e87f66bc2d924c9e254bf91821181, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  name: Fireball
+  name: Fire
   prefab: {fileID: 8365694709168275748, guid: 1c814924b79491448a55a784bb29e7d8, type: 3}
   damage: 10
   speed: 20
   turnDuration: 1.5
+  spellDuration: 0
   enemyMisses: 0
+  mergedSpell: 0
+  spellComponent1: {fileID: 0}
+  spellComponent2: {fileID: 0}
