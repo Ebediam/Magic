@@ -29,9 +29,14 @@ public class SpellController : MonoBehaviour
         if (other.transform.GetComponent<EnemyManager>())
         {
             enemy = other.transform.GetComponent<EnemyManager>();
-            enemy.Damaged(spellData.damage);
+            enemy.Damaged(spellData.damage, spellData.damageDelay);
             enemy.missAttack = spellData.enemyMisses;
-            Destroy(this.gameObject, spellData.spellDuration);
+            if (!spellData.stayingSpell)
+            {
+                Destroy(this.gameObject, spellData.spellDuration);
+            }
+
+
         }
 
     }

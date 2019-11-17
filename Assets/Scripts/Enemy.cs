@@ -18,8 +18,18 @@ public class Enemy : MonoBehaviour
         
     }
 
+    public void Damaged()
+    {
+        animator.Play("Damaged");
+    }
+
     public void Attack()
     {
         animator.Play("Attack");
+    }
+
+    public void Killed()
+    {
+        animator.Play("Killed");
     }
 }

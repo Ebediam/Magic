@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ice
   prefab: {fileID: 9196562974048062303, guid: 199c92b99a204304781cf746a6a3621a, type: 3}
-  damage: 0
+  damage: 10
   speed: 0
-  turnDuration: 2
+  turnDuration: 2.5
   spellDuration: 4
+  damageDelay: 1.5
   enemyMisses: 0
   mergedSpell: 0
   spellComponent1: {fileID: 0}

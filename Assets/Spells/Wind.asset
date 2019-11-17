@@ -16,8 +16,9 @@ MonoBehaviour:
   prefab: {fileID: 6133196452366136174, guid: 4a29f02c8a9693e45a6c7400815d3a93, type: 3}
   damage: 10
   speed: 0
-  turnDuration: 1.5
+  turnDuration: 2
   spellDuration: 3
+  damageDelay: 0.8
   enemyMisses: 0
   mergedSpell: 0
   spellComponent1: {fileID: 0}

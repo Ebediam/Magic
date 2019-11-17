@@ -952,6 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e3ac47ae3190e439eb65f3360c0419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   animator: {fileID: 76614552296718763}
   spawnPoint: {fileID: 1107631436143133328}
   spells:
@@ -967,12 +968,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 99cdca030e2b144468735b6643271de4, type: 2}
   - {fileID: 11400000, guid: 95fd48b77a44d59499b11776e963aa84, type: 2}
   - {fileID: 11400000, guid: 5907f29b1d3fe144d834e161da29457d, type: 2}
+  - {fileID: 11400000, guid: 997269da6c45e8b4d83a6d9001cb7d41, type: 2}
+  - {fileID: 11400000, guid: 368f707fcea8047469b89a17e1cd5863, type: 2}
+  - {fileID: 11400000, guid: 0bf820cb86b426d40a5c44f5ce4bb090, type: 2}
+  - {fileID: 11400000, guid: ab28bbc146171304d80137b03f9a6d06, type: 2}
+  - {fileID: 11400000, guid: 3ab4047fc354c1c45af4f09ed0c16cf0, type: 2}
+  - {fileID: 11400000, guid: 06d8b2de4bb9d5c469be869d2e788c1f, type: 2}
+  - {fileID: 11400000, guid: 953ac8af78801484abd96eafb6c3b1ae, type: 2}
   lastSpell: {fileID: 0}
   lastMergedSpell: {fileID: 0}
   currentSpell: {fileID: 0}
   healthUI: {fileID: 0}
   spellText: {fileID: 0}
   maxHealth: 100
+  hitSFX: {fileID: 0}
 --- !u!1 &6706297032913287984
 GameObject:
   m_ObjectHideFlags: 0

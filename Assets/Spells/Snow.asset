@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8e87f66bc2d924c9e254bf91821181, type: 3}
+  m_Name: Snow
+  m_EditorClassIdentifier: 
+  name: Snow
+  prefab: {fileID: 1470792699361267940, guid: 7873f672023b6a445b8839bb4e60cc83, type: 3}
+  damage: 30
+  speed: 0
+  turnDuration: 1.5
+  spellDuration: 3
+  damageDelay: 0.5
+  stayingSpell: 0
+  enemyMisses: 0
+  mergedSpell: 1
+  spellComponent1: {fileID: 11400000, guid: 7c6060f7d9ca4d64f84a5f52ba224e99, type: 2}
+  spellComponent2: {fileID: 11400000, guid: 99cdca030e2b144468735b6643271de4, type: 2}

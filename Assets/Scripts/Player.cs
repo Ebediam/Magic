@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class Player : MonoBehaviour
 {
+    public GameManager gameManager;
     public delegate void AttackDelegate(float seconds);
 
     public static AttackDelegate attackEvent;
@@ -30,6 +31,8 @@ public class Player : MonoBehaviour
     public float maxHealth;
     float currentHealth;
 
+    public AudioSource hitSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +52,10 @@ public class Player : MonoBehaviour
     }
 
 
-
+    public void Reset()
+    {
+        
+    }
 
 
     public void Attack(int spellNumber)
@@ -113,9 +119,11 @@ public class Player : MonoBehaviour
 
 
 
-    public void Damaged(float damage)
+    public void Damaged(float damage, float delay)
     {
-        animator.Play("Damaged");
+
+        Invoke("PlayDamagedAnimation", delay);
+
 
         currentHealth -= damage;
         healthUI.localScale = new Vector3((currentHealth/maxHealth), healthUI.localScale.y, healthUI.localScale.z);
@@ -129,8 +137,14 @@ public class Player : MonoBehaviour
 
     }
 
+    public void PlayDamagedAnimation()
+    {
+        animator.Play("Damaged");
+        hitSFX.Play();
+    }
+
     public void Die()
     {
-
+        gameManager.Restart();
     }
 }

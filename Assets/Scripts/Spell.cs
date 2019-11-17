@@ -11,6 +11,11 @@ public class Spell : ScriptableObject
     public float speed;
     public float turnDuration;
     public float spellDuration;
+
+    public float damageDelay;
+
+    public bool stayingSpell;
+
     public bool enemyMisses;
     public bool mergedSpell;
     public Spell spellComponent1;

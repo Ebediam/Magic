@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8e87f66bc2d924c9e254bf91821181, type: 3}
+  m_Name: Sand
+  m_EditorClassIdentifier: 
+  name: Sand
+  prefab: {fileID: 4513223969630448976, guid: d4e4f98ca54b3ef43a161d3bf4d7feab, type: 3}
+  damage: 0
+  speed: 0
+  turnDuration: 3
+  spellDuration: 6
+  damageDelay: 0
+  stayingSpell: 0
+  enemyMisses: 1
+  mergedSpell: 1
+  spellComponent1: {fileID: 11400000, guid: 8aae5eb7290671347ae199c73c322745, type: 2}
+  spellComponent2: {fileID: 11400000, guid: 9a381513555aac343aa6eefc18a7e409, type: 2}

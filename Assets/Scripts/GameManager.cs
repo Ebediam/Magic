@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
 {
 
     public GameObject canvas;
-
+    public delegate void  RestartDelegate();
+    public static RestartDelegate RestartEvent;
     
     public List<Button> buttons;
     public delegate void TurnDelegate();
     public static TurnDelegate enemyTurn;
     public static TurnDelegate playerTurn;
+
+    public GameObject restartButton;
 
     public bool isEnemyTurn;
 
@@ -22,10 +26,21 @@ public class GameManager : MonoBehaviour
     {
         Player.attackEvent += ChangeTurn;
         EnemyManager.EnemyTurnEndEvent += ChangeTurn;
+        EnemyManager.EnemyDeadEvent += RestartButton;
+
         foreach(Button button in canvas.GetComponentsInChildren<Button>())
         {
             buttons.Add(button);
         }
+    }
+
+    public void RestartButton()
+    {
+        if (restartButton)
+        {
+            restartButton.SetActive(true);
+        }
+
     }
 
     // Update is called once per frame
@@ -76,6 +91,16 @@ public class GameManager : MonoBehaviour
     public void EnemyTurn()
     {
         enemyTurn?.Invoke();
+    }
+
+    public void Restart()
+    {
+
+        Player.attackEvent -= ChangeTurn;
+        EnemyManager.EnemyTurnEndEvent -= ChangeTurn;
+        EnemyManager.EnemyDeadEvent = RestartButton;
+        RestartEvent?.Invoke();
+        SceneManager.LoadScene(0);
     }
 
 

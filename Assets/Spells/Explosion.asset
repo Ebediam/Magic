@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Explosion
   prefab: {fileID: 5056402402548188640, guid: b4f9429702dca5e4ea9f4f73dca75315, type: 3}
-  damage: 50
+  damage: 30
   speed: 0
-  turnDuration: 2
+  turnDuration: 1
   spellDuration: 2
+  damageDelay: 0
+  stayingSpell: 0
   enemyMisses: 0
   mergedSpell: 1
   spellComponent1: {fileID: 11400000, guid: aa1d858de301c5747b56fbad1fdb18fd, type: 2}
